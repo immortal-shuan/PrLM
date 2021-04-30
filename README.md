@@ -57,6 +57,37 @@ word_vec = bert_model(input_ids=input_ids, attention_mask=attention_mask)[0]
 
 **Albert**
 
+Albert的vocab与Bert-wwm一致，tokenizer可以直接用上面的convert text to ids 的方法
+也可以把BertTokenizer替换成ElectraTokenizer进行转换
+
+模型的加载方法如下：
+
+```[bash]
+from transformers import AlbertModel
+bert_path = '预训练模型文件夹的地址'
+bert_model = AlbertModel.from_pretrained(bert_path)
+
+# 版本不一样这里的输出也不一样，这里是新版本transformer的输出
+# 老版本的输出如下:
+# output_info = bert_model(input_ids=input_ids, attention_mask=attention_mask)
+# word_vec = output_info.last_hidden_state
+# pool_output = output_info.pooler_output
+word_vec, pool_ouput = bert_model(input_ids=input_ids, attention_mask=attention_mask)
+
+```
+
+**XLNet**
+
+
+**Macbert**
+
+
+**ernie-1.0**
+
+
+**longformer**
+
+
 
 
 
