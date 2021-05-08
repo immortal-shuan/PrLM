@@ -1,6 +1,6 @@
 ## 本项目主要做了一些常见中文torch版本预训练模型的加载方法
 
-**Bert-wwm, Bert-wmm-ext, Roberta-base, Roberta-large**
+**Bert-wwm, Bert-wmm-ext, Roberta-base, Roberta-large，ernie-1.0**
 
 ```[bash]
 from transformers import BertTokenizer, BertModel
@@ -80,9 +80,6 @@ word_vec, pool_ouput = bert_model(input_ids=input_ids, attention_mask=attention_
 
 
 **Macbert**
-
-
-**ernie-1.0**
 
 
 **longformer**
