@@ -35,6 +35,8 @@ word_vec, pool_ouput = bert_model(input_ids=input_ids, attention_mask=attention_
 
 ```
 
+其中需要注意的是ernie的词表（即vocab.txt文件）和Bert-wwm, Bert-wmm-ext, Roberta-base, Roberta-large的词表文件不一样，即通过Berttokenizer加载Bert-wwm词表生成的input_ids可以在Bert-wmm-ext, Roberta-base, Roberta-large内通用，不能够在ernie里面使用，ernie的input_ids需要单独加载ernie词表生成input_ids.
+
 **Electra**
 
 Electra的vocab与Bert-wwm一致，tokenizer可以直接用上面的convert text to ids 的方法
