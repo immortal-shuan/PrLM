@@ -118,6 +118,3 @@ word_vec, pool_ouput = bert_model(input_ids=input_ids, attention_mask=attention_
 ```[bash]
 pip install sentencepiece
 ```
-
-**Macbert**
-
